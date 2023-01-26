@@ -31,6 +31,12 @@ body {
 	width: 100%;
 	background-image: $blue-gradient-solid;
 	z-index: 100;
+	transform: translateX(100%);
+	transition: .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+	&--active{
+		transform: translateX(0);
+	}
 
 	&__item {
 		position: relative;
@@ -107,6 +113,19 @@ body {
 			transition-delay: 0.1s;
 		}
 	}
+}
+
+@keyframes navItemAnimation {
+	from{
+transform: translateX(200%);
+	}
+	to{
+transform: translateX(0);
+	}
+}
+
+.nav-item-animation{
+	animation: navItemAnimation 1s both;
 }
 
 //Header
