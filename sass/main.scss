@@ -32,9 +32,9 @@ body {
 	background-image: $blue-gradient-solid;
 	z-index: 100;
 	transform: translateX(100%);
-	transition: .5s cubic-bezier(0.65, 0.05, 0.36, 1);
+	transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
 
-	&--active{
+	&--active {
 		transform: translateX(0);
 	}
 
@@ -116,15 +116,15 @@ body {
 }
 
 @keyframes navItemAnimation {
-	from{
-transform: translateX(200%);
+	from {
+		transform: translateX(200%);
 	}
-	to{
-transform: translateX(0);
+	to {
+		transform: translateX(0);
 	}
 }
 
-.nav-item-animation{
+.nav-item-animation {
 	animation: navItemAnimation 1s both;
 }
 
@@ -172,9 +172,53 @@ transform: translateX(0);
 //MAIN
 //DREAM SECTION
 
-
+.dreams {
+	&__box {
+		display: flex;
+		flex-direction: column;
+		margin: 2em 0;
+	}
+	&__img {
+		width: 100%;
+		margin-bottom: 1em;
+	}
+	&__title {
+		margin-bottom: 0.5em;
+	}
+	&__text {
+		font-size: 1.4rem;
+	}
+}
 
 //Media
+
+@media (min-width: 576px) {
+	.dreams {
+		&__box {
+			flex-direction: row;
+			justify-content: space-between;
+
+			&-text {
+				width: 55%;
+
+				&--right {
+					text-align: right;
+				}
+			}
+			&-img {
+				width: 40%;
+
+				&--rigth {
+					order: 1;
+				}
+			}
+		}
+		&__img {
+			margin-bottom: 0;
+			min-height: 300px;
+		}
+	}
+}
 
 @media (min-width: 768px) {
 	.white-block {
@@ -192,6 +236,11 @@ transform: translateX(0);
 			font-size: 1.6rem;
 		}
 	}
+	.dreams {
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -203,6 +252,30 @@ transform: translateX(0);
 		background-image: $blue-gradient, url("../img/header-big.jpg");
 		&__heading {
 			height: 10rem;
+		}
+	}
+	.nav {
+		&__item {
+			font-size: 4.8rem;
+		}
+	}
+
+	.dreams {
+		&__box {
+			margin: 5em 0;
+			&-text {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				margin-bottom: 2.5em;
+			}
+		}
+
+		&__title {
+			font-size: 3.6rem;
+		}
+		&__text {
+			font-size: 2.2rem;
 		}
 	}
 }
