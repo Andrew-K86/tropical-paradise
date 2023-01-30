@@ -238,13 +238,13 @@ body {
 			transition: transform 1s, opacity 1s;
 
 			&--first {
-				background-image: $light-blue-gradient, url("../img/island-one.jpg");
+				background-image: $light-blue-gradient, url("img/island-one.jpg");
 			}
 			&--second {
 				background-image: $blue-gradient, url("../img/island-two.jpg");
 			}
 			&--third {
-				background-image: $purple-gradient, url("../img/island-three.jpg");
+				background-image: $purple-gradient, url("img/island-three.jpg");
 			}
 			&-title {
 				font-family: "Dancing Script", cursive;

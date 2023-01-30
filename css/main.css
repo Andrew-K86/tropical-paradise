@@ -301,13 +301,13 @@ body {
   transition: transform 1s, opacity 1s;
 }
 .islands__card-img--first {
-  background-image: linear-gradient(45deg, rgba(8, 206, 255, 0.75), rgba(8, 24, 255, 0.75)), url("../img/island-one.jpg");
+  background-image: linear-gradient(45deg, rgba(8, 206, 255, 0.75), rgba(8, 24, 255, 0.75)), url("img/island-one.jpg");
 }
 .islands__card-img--second {
   background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/island-two.jpg");
 }
 .islands__card-img--third {
-  background-image: linear-gradient(45deg, rgba(190, 10, 214, 0.75), rgba(68, 0, 255, 0.75)), url("../img/island-three.jpg");
+  background-image: linear-gradient(45deg, rgba(190, 10, 214, 0.75), rgba(68, 0, 255, 0.75)), url("img/island-three.jpg");
 }
 .islands__card-img-title {
   font-family: "Dancing Script", cursive;
