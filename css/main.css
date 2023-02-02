@@ -375,6 +375,57 @@ body {
   background-color: #0fe29c;
 }
 
+.offers {
+  position: relative;
+  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("/img/offersHero-small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.offers .section-heading {
+  color: #fff;
+}
+.offers__options {
+  margin: 1em 0;
+  box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.18);
+  background-color: #fff;
+  overflow: hidden;
+}
+.offers__options-img {
+  width: 100%;
+  transition: transform 0.3s;
+}
+.offers__options-img:hover {
+  transform: scale(1.1);
+}
+.offers__options-info {
+  padding: 2em;
+}
+.offers__options-heading {
+  margin-bottom: 0.5em;
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+.offers__options-text {
+  margin-bottom: 0.5em;
+  font-size: 1.3rem;
+  color: #2e2e2e;
+}
+.offers__options-btn {
+  margin-top: 1em;
+  padding: 0.8em;
+  width: 100%;
+  color: #fff;
+  background-color: #1755e7;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.offers__options-btn::before {
+  background-color: #164dcc;
+}
+
 @media (min-width: 576px) {
   .dreams__box {
     flex-direction: row;
@@ -395,6 +446,30 @@ body {
   .dreams__img {
     margin-bottom: 0;
     min-height: 300px;
+  }
+  .offers__options {
+    display: flex;
+    margin: 2em 0;
+    width: 100%;
+  }
+  .offers__options-img {
+    width: 50%;
+    height: auto;
+  }
+  .offers__options-img--rigth {
+    order: 1;
+  }
+  .offers__options-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .offers__options-heading {
+    margin-bottom: 0.5em;
+    font-size: 3.6rem;
+  }
+  .offers__options-btn {
+    padding: 1em;
   }
 }
 @media (min-width: 768px) {
@@ -473,6 +548,17 @@ body {
   .hero-img hr {
     width: 60%;
     min-width: 900px;
+  }
+  .offers {
+    background-color: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/offersHero-big.jpg");
+  }
+  .offers__optins-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 300px;
+  }
+  .offers__optins-text {
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 1100px) {

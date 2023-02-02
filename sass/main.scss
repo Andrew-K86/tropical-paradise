@@ -317,6 +317,62 @@ body {
 	}
 }
 
+//OFFERS
+.offers {
+	position: relative;
+	@include heroImages("/img/offersHero-small.jpg");
+	overflow: hidden;
+
+	.section-heading {
+		color: $pure-white;
+	}
+
+	&__options {
+		margin: 1em 0;
+		box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.18);
+		background-color: $pure-white;
+		overflow: hidden;
+
+		&-img {
+			width: 100%;
+			transition: transform 0.3s;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+
+		&-info {
+			padding: 2em;
+		}
+
+		&-heading {
+			margin-bottom: 0.5em;
+			font-size: 2.4rem;
+			font-weight: 300;
+		}
+		&-text {
+			margin-bottom: 0.5em;
+			font-size: 1.3rem;
+			color: $dark;
+		}
+		&-btn {
+			margin-top: 1em;
+			padding: 0.8em;
+			width: 100%;
+			color: $pure-white;
+			background-color: $main-color;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+			
+			&::before {
+				background-color: $secondary-color;
+			}
+		}
+	}
+}
+
 //Media
 
 @media (min-width: 576px) {
@@ -343,6 +399,35 @@ body {
 		&__img {
 			margin-bottom: 0;
 			min-height: 300px;
+		}
+	}
+	.offers{
+		&__options{
+			display: flex;
+			margin: 2em 0;
+			width: 100%;
+
+			&-img{
+				width: 50%;
+				height: auto;
+
+				&--rigth{
+					order: 1;
+				}
+			}
+			&-info {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			&-heading{
+				margin-bottom: 0.5em;
+				font-size: 3.6rem;
+			}
+			&-btn{
+				padding: 1em;
+			}
+
 		}
 	}
 }
@@ -436,6 +521,20 @@ body {
 		hr {
 			width: 60%;
 			min-width: 900px;
+		}
+	}
+	.offers{
+		background-color: $blue-gradient, url('../img/offersHero-big.jpg');
+
+		&__optins{
+			&-img{
+				object-fit: cover;
+				height: 300px;
+			}
+
+			&-text{
+				font-size: 1.5rem;
+			}
 		}
 	}
 }
