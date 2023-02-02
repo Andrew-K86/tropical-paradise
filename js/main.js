@@ -18,10 +18,12 @@ const handlNavItemAnimation = () => {
     allNavItem.forEach(item => {
         item.classList.toggle('nav-item-animation');
         item.style.animationDelay = '.' + delayTime + 's';
-        delayTime ++;
+        delayTime++;
     })
 
 }
+
+
 
 
 

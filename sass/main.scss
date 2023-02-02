@@ -365,10 +365,51 @@ body {
 			border: none;
 			border-radius: 8px;
 			cursor: pointer;
-			
+
 			&::before {
 				background-color: $secondary-color;
 			}
+		}
+	}
+}
+
+//REVIEW
+
+.reviews {
+	&__box {
+		position: relative;
+		margin: 2em;
+		padding: 2em;
+		border-radius: 8px;
+		box-shadow: 3px 3px 10px hsla(0, 0%, 18%, 0.18);
+		transition: transform .3s;
+
+		&:hover{
+			transform: scale(0.95);
+		}
+
+		&-img {
+			position: absolute;
+			top: 8%;
+			left: 75%;
+			transform: translate(-50%, -50%);
+
+			img {
+				width: 80px;
+				height: 80px;
+				object-fit: cover;
+				border-radius: 50%;
+			}
+		}
+		&-quote {
+			margin-bottom: 1em;
+			font-size: 3rem;
+			color: $main-color;
+		}
+		&-text {
+			margin-bottom: 1em;
+			font-size: 1.4rem;
+			color: $dark;
 		}
 	}
 }
@@ -401,17 +442,17 @@ body {
 			min-height: 300px;
 		}
 	}
-	.offers{
-		&__options{
+	.offers {
+		&__options {
 			display: flex;
 			margin: 2em 0;
 			width: 100%;
 
-			&-img{
+			&-img {
 				width: 50%;
 				height: auto;
 
-				&--rigth{
+				&--rigth {
 					order: 1;
 				}
 			}
@@ -420,14 +461,13 @@ body {
 				flex-direction: column;
 				justify-content: space-between;
 			}
-			&-heading{
+			&-heading {
 				margin-bottom: 0.5em;
 				font-size: 3.6rem;
 			}
-			&-btn{
+			&-btn {
 				padding: 1em;
 			}
-
 		}
 	}
 }
@@ -473,6 +513,12 @@ body {
 			margin: 1em;
 			width: 45%;
 		}
+	}
+}
+
+@media(max-width: 767px){
+	.reviews.section-padding{
+		padding: 6em 0;
 	}
 }
 
@@ -523,16 +569,16 @@ body {
 			min-width: 900px;
 		}
 	}
-	.offers{
-		background-color: $blue-gradient, url('../img/offersHero-big.jpg');
+	.offers {
+		background-color: $blue-gradient, url("../img/offersHero-big.jpg");
 
-		&__optins{
-			&-img{
+		&__optins {
+			&-img {
 				object-fit: cover;
 				height: 300px;
 			}
 
-			&-text{
+			&-text {
 				font-size: 1.5rem;
 			}
 		}
