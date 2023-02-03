@@ -419,6 +419,7 @@ body {
 .contact {
 	position: relative;
 	background-color: $light-white;
+	overflow: hidden;
 
 	.white-block-left {
 		background-color: $dark;
@@ -453,9 +454,53 @@ body {
 		background-color: $main-color;
 		cursor: pointer;
 
-		&::before{
+		&::before {
 			background-color: $secondary-color;
 		}
+	}
+}
+
+//FOOTER
+
+.footer {
+	color: $pure-white;
+	background-color: $dark;
+	.wrapper {
+		padding: 6em 2em 2em;
+	}
+	&__box {
+		font-size: 1.4rem;
+
+		&-desktop {
+			display: none;
+		}
+		&-title {
+			margin-bottom: 1em;
+			font-size: 3rem;
+			text-transform: uppercase;
+		}
+		&-social {
+			margin: 2em 0 1em;
+		}
+		&-link {
+			font-size: 3.6rem;
+			padding: 0 0.3em;
+			color: $pure-white;
+			text-decoration: none;
+			transition: color 0.3s;
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:hover {
+				color: $light-white;
+			}
+		}
+	}
+	&__bottom-text {
+		text-align: center;
+		padding: 2em;
 	}
 }
 
@@ -557,6 +602,37 @@ body {
 		&__card {
 			margin: 1em;
 			width: 45%;
+		}
+	}
+	.footer {
+		&__boxes {
+			display: flex;
+			justify-content: space-between;
+		}
+		&__box {
+			margin: 0 2em;
+			width: 25%;
+			&:first-child {
+				width: 50%;
+			}
+
+			&-desktop {
+				display: block;
+			}
+
+			&-title {
+				font-size: 2.4rem;
+			}
+			&-list {
+				list-style: none;
+			}
+			&-list-item {
+				margin-bottom: 1em;
+				a {
+					color: $pure-white;
+					text-decoration: none;
+				}
+			}
 		}
 	}
 }
